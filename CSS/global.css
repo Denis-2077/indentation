@@ -1,0 +1,41 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    color: #000;
+    background: #fff;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,ol {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,p,figure {
+    margin: 0;
+}
+
+.container {
+    container: 1180px;
+    margin-left: 180px;
+}
