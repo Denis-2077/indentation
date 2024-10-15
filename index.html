@@ -7,7 +7,7 @@
     <title>Статья</title>
 </head>
 <body>
-    <main>
+    <article class="article">
         <section class="section">
             <div class="container">
                 <h1 class="page__title">
@@ -35,11 +35,13 @@
                     <h2 class="section__title">
                         Содержание:
                     </h2>
-                    <ol>
-                        <li><a href="#path--one">Отступ задается от предыдущего элемента к следующему</a></li>
-                        <li><a href="#path--two">Отступ задается последнему возможному элементу в DOM-дереве</a></li>
-                        <li><a href="#path--three">Для последнего элемента группы отступ обнуляется</a></li>
-                    </ol>
+                        <nav>
+                            <ol>
+                                <li><a href="#path--one">Отступ задается от предыдущего элемента к следующему</a></li>
+                                <li><a href="#path--two">Отступ задается последнему возможному элементу в DOM-дереве</a></li>
+                                <li><a href="#path--three">Для последнего элемента группы отступ обнуляется</a></li>
+                            </ol>
+                        </nav>
                 </div>
             </div>
         </section>
@@ -49,9 +51,9 @@
                 <h2 class="section__content">
                     Отступ задается от предыдущего элемента к следующему:<br> от первого ко второму, сверху вниз, слева направо. 
                 </h2>
-                    <div class="float__left">
+                    <div class="float__container">
                         <figure>
-                            <img class="img__float--left" src="image/section-3 image-1.png" width="560px" height="415px">
+                            <img class="img__float--left" src="image/section-3 image-1.png" alt="изображение четырех котиков, каждый размещен в своем блоке">
                         </figure>
                         <p class="text-float">
                             <b>ВАЖНО:</b> <i>margin</i> всегда задают от предыдущего<br> элемента к следующему.
@@ -66,9 +68,9 @@
                             Для <i>padding</i> верно обратное. Исключением<br> является его применения в декоративных целях,<br> например, для увеличения области ссылки.
                         </p>
                     </div>
-                    <div class="float__right">
+                    <div class="float__container">
                         <figure>
-                            <img class="img__float--right" src="image/section-3 image-2.png" width="560px" height="279px">
+                            <img class="img__float--right" src="image/section-3 image-2.png" alt="изображение одного кота и описание секции">
                         </figure>
                         <p class="text-float">    
                             Отступ внутри блока сверху или слева<br> реализуется через <i>padding-top</i> и <i>padding-left</i><br> родителя.
@@ -92,7 +94,7 @@
                         Вообще, margin задают исключительно между соседними элементами DOM-дерева. Для примера, посмотрите на<br> этот список:
                     </p>
                     <figure>
-                        <img class="img__content" src="image/section-4 image-1.png" width="1080px" height="537px">
+                        <img class="img__content" src="image/section-4 image-1.png" alt="пример списка в html, отступы DOM-дереве">
                     </figure>
                     <figure>
                         <img class="img__content img__section--one" src="image/section-4 image-2.png" width="600px" height="450px">
@@ -101,7 +103,7 @@
                         Отступ делают за счёт соседних элементов, а не дочерних:
                     </p>
                     <figure>
-                        <img class="img__content" src="image/section-4 image-3.png" width="1080px" height="506px"> 
+                        <img class="img__content" src="image/section-4 image-3.png" alt="пример на изображение списка с полезными рецептами"> 
                     </figure>
                     <p class="text">
                         Казалось бы, можно задать отступ параграфу &lt;p&gt;, либо обёртке &lt;article&gt; для достижения той же цели. Внешне<br> останется все точно также, но так делать не рекомендуется.
@@ -110,13 +112,13 @@
                         Предыдущий пример был достаточно простым, но бывает вложенность значительно больше.
                     </p>
                     <figure>
-                        <img class="img__content img__section--two" src="image/section-4 image-4.png" width="964px" height="164px">
+                        <img class="img__content img__section--two" src="image/section-4 image-4.png" alt="пример разделения и отступов в html на списке рецепта">
                     </figure>
                     <p class="text">
                         В случае с заголовком, если ему необходим отступ сверху, последним элементом будет <i>section.</i> Именно для него<br> задается <i>padding-top,</i> а не <i>div</i> с классом <i>container.</i> Свойства <i>margin,</i> которые стоят по умолчанию необходимо<br> обнулить.
                     </p>
                     <figure>
-                        <img class="img__content img__section--three" src="image/section-4 image-5.png" width="1022px" height="504px">
+                        <img class="img__content img__section--three" src="image/section-4 image-5.png" alt="пример с отступами если есть заголовок">
                     </figure>
                     <p class="text">
                         Это необходимо для более простого поиска отступов в будущем — для вас или того, кто будет верстать после вас.<br> Кроме того, возможны серьёзные проблемы при динамическом дублировании или выводе вёрстки с<br> нестандартной структурой отступов.
@@ -136,37 +138,37 @@
                         Между рецептами расстояние одинаковое. Можно заметить, что и до следующего блока расстояние такое же.
                     </p>
                     <figure>
-                        <img class="img__content img__section--four" src="image/section-5 image-1.png" width="600px" height="600px">
+                        <img class="img__content img__section--four" src="image/section-5 image-1.png" alt="отступы на примере того же списка рецептов">
                     </figure>
                     <p class="text">
                         В соответствии со вторым принципом: последний <i>margin</i> обнуляется, а нижний отступ задаётся через <i>padding</i> для<br> <i>section.</i> Я чаще всего задаю <i>padding</i> для секции с обоих сторон, если расстояние между секциями 100px задаю<br> секциям <i>padding-top:50px и padding-bottom:50px.</i>
                     </p>
                     <figure>
-                        <img class="img__content img__section--four" src="image/section-5 image-2.png" width="600px" height="607px">
+                        <img class="img__content img__section--four" src="image/section-5 image-2.png" alt="пример на списке рецептов от строчки к строчке">
                     </figure>
                     <figure>
-                        <img class="img__content" src="image/section-5 image-3.png" width="1080px" height="1058px">
+                        <img class="img__content" src="image/section-5 image-3.png" alt="пример кода в html">
                     </figure>
                     <p class="text">
                         Для большего понимания рассмотрим другой пример, который часто встречается на практике:
                     </p>
                     <figure>
-                        <img class="img__content" src="image/section-5 image-4.png" width="1080px" height="88px">
+                        <img class="img__content" src="image/section-5 image-4.png" alt="пример на меню, навигации по сайту Methed">
                     </figure>
                     <figure>
-                        <img class="img__content img__section--five" src="image/section-5 image-5.png" width="806px" height="475px">
+                        <img class="img__content img__section--five" src="image/section-5 image-5.png" alt="пример кода в html с использованием тега nav">
                     </figure>
                     <p class="text">
                         Здесь нас интересует отступ между пунктами меню и списком с кнопкой поиска. Отступы между пунктами меню<br> задаются так:
                     </p>
                     <figure>
-                        <img class="img__content img__section--six" src="image/section-5 image-6.png" width="317px" height="110px">
+                        <img class="img__content img__section--six" src="image/section-5 image-6.png" alt="отступы между пунктами меню">
                     </figure>
                     <p class="text">
                         Советую использовать псевдоклассы <i>:last-child</i> чаще других, например так:
                     </p>
                     <figure>
-                        <img class="img__content img__section--seven" src="image/section-5 image-7.png" width="500px" height="383px">
+                        <img class="img__content img__section--seven" src="image/section-5 image-7.png" alt="пример псевдоклассов">
                     </figure>
             </div>
         </section>
@@ -198,6 +200,6 @@
                 </div>
             </div>
         </section>
-    </main>
+    </article>
 </body>
 </html>

@@ -53,17 +53,22 @@ a {
 
 /* section__three Отступы */
 
+.float__container {
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
 .img__float--left {
     float: left;
-    margin-bottom: 15px;
+    width: 40%;
     margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .img__float--right {
     float: right;
     margin-bottom: 15px;
     margin-right: 550px;
-    margin-top: 70px;
 }
 
 .text-float {
