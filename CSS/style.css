@@ -67,8 +67,8 @@ a {
 
 .img__float--right {
     float: right;
-    margin-bottom: 15px;
-    margin-right: 550px;
+    width: 40%;
+    margin-right: 300px;
 }
 
 .text-float {
